@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal CSS dan Styling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Blog Saya</h1>
+        <p>Tempat berbagi ilmu dan inspirasi</p>
+
+        <nav>
+            <a href="blog.html">Home</a> |
+            <a href="artikel1.html">Artikel 1</a> |
+            <a href="artikel2.html">Artikel 2</a> |
+            <a href="artikel3.html">Artikel 3</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2>Mengenal CSS dan Styling</h2>
+            <p class="tanggal">25 Juli 2025</p>
+
+            <p>CSS (Cascading Style Sheets) adalah bahasa desain yang digunakan untuk memperindah tampilan HTML. Tanpa
+                CSS, website hanya berupa teks polos dan sangat sederhana.</p>
+
+            <h3>Manfaat CSS</h3>
+            <ul>
+                <li>Mempercantik tampilan website</li>
+                <li>Mengatur layout dan tata letak</li>
+                <li>Menyesuaikan desain untuk berbagai ukuran layar (responsive)</li>
+            </ul>
+
+            <h3>Contoh CSS Sederhana</h3>
+            <pre><code>p {
+                color: blue;
+                font-size: 16px;
+            }</code></pre>
+
+            <p>Dengan beberapa baris CSS, website kamu langsung berubah menjadi lebih menarik!</p>
+
+            <a href="blog.html" class="baca">← Kembali ke Blog</a>
+        </article>
+
+        <section class="komentar">
+            <h3>Tinggalkan Komentar</h3>
+            <form>
+                <label for="nama">Nama:</label><br>
+                <input type="text" id="nama" name="nama" required><br><br>
+
+                <label for="pesan">Komentar:</label><br>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea><br><br>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Blog saya | Dibuat oleh Qosim</p>
+        <p>Kontak: <a href="mailto:qosim@example.com">qosim@example.com</a></p>
+    </footer>
+
+    <script>
+            document.querySelector("form").addEventListener("submit", function (e) {
+                const nama = document.getElementById("nama").value.trim();
+                const pesan = document.getElementById("pesan").value.trim();
+
+                if (nama === "" || pesan === "") {
+                    alert("Nama dan komentar tidak boleh kosong!");
+                    e.preventDefault(); // mencegah form terkirim
+                }
+            });
+        </script>
+
+</body>
+
+</html>

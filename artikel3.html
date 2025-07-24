@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Blog Saya</h1>
+        <p>Tempat berbagi ilmu dan inspirasi</p>
+
+        <nav>
+            <a href="blog.html">Home</a> |
+            <a href="artikel1.html">Artikel 1</a> |
+            <a href="artikel2.html">Artikel 2</a> |
+            <a href="artikel3.html">Artikel 3</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2>Mengenal JavaScript</h2>
+            <p class="tanggal">25 Juli 2025</p>
+
+            <p>CJavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif.</p>
+
+            <h3>Fungsi JS(JavaScript)</h3>
+            <ul>
+                <li>Fungsi Utama: Menambahkan dinamisme ke website (seperti animasi, form validasi, update konten tanpa
+                    reload).</li>
+                <li>Berjalan di Browser: Dieksekusi di sisi klien (client-side), tetapi kini juga bisa di server
+                    (Node.js).</li>
+                <li>Sintaks Mudah: Mirip dengan bahasa seperti C++ atau Java, tetapi lebih fleksibel.</li>
+                <li>Fitur Kunci:
+                <li>Manipulasi DOM (mengubah elemen HTML/CSS).</li>
+                <li>Event handling (respons terhadap klik, input, dll.).</li>
+                <li>Async programming (AJAX/fetch untuk komunikasi dengan server).</li>
+                </li>
+            </ul>
+
+            <h3>Contoh JS Sederhana</h3>
+            <pre><code>
+                document.getElementById("tombol").addEventListener("click", function() {
+                    alert("Hello World!");
+                });
+            </code></pre>
+
+            <p>JavaScript esensial untuk pengembangan web modern, bekerja bersama HTML (struktur) dan CSS (tampilan).
+            </p>
+
+            <a href="blog.html" class="baca">← Kembali ke Blog</a>
+        </article>
+
+        <section class="komentar">
+            <h3>Tinggalkan Komentar</h3>
+            <form>
+                <label for="nama">Nama:</label><br>
+                <input type="text" id="nama" name="nama" required><br><br>
+
+                <label for="pesan">Komentar:</label><br>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea><br><br>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Blog saya | Dibuat oleh Qosim</p>
+        <p>Kontak: <a href="mailto:qosim@example.com">qosim@example.com</a></p>
+    </footer>
+
+    <script>
+            document.querySelector("form").addEventListener("submit", function (e) {
+                const nama = document.getElementById("nama").value.trim();
+                const pesan = document.getElementById("pesan").value.trim();
+
+                if (nama === "" || pesan === "") {
+                    alert("Nama dan komentar tidak boleh kosong!");
+                    e.preventDefault(); // mencegah form terkirim
+                }
+            });
+        </script>
+
+</body>
+
+</html>

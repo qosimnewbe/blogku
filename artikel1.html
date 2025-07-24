@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Belajar html dasar </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1> selamat datang di Blog saya </h1>
+        <p> tempat berbagi ilmu dan inspirasi</p>
+
+        <nav>
+            <a href="blog.html">Home</a> |
+            <a href="artikel1.html">Artikel 1</a> |
+            <a href="artikel2.html">Artikel 2</a> |
+            <a href="artikel3.html">Artikel 3</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2>Belajar html dasar</h2>
+            <p class="tanggal">24 Juli 2025</p>
+            <h2>Belajar HTML Dasar</h2>
+            <p class="tanggal">24 Juli 2025</p>
+            <img src="https://www.bing.com/images/search?view=detailV2&ccid=jObaSN3c&id=883AA4F086612BCD677DF9CBBDCC0938FAB2DB66&thid=OIP.jObaSN3cLBxsl2AKGpY14gHaD4&mediaurl=https%3a%2f%2fwww.ionos.at%2fdigitalguide%2ffileadmin%2fDigitalGuide%2fTeaser%2fhtml-tagst.jpg&exph=630&expw=1200&q=HTML&simid=608015573264447931&FORM=IRPRST&ck=1DAF99A412B969DD82AFAAC248962063&selectedIndex=6&itb=0"
+                alt="Belajar HTML" style="width: 100%; border-radius: 8px;">
+
+            <p>HTML adalah fondasi dari semua halaman web. Dalam artikel ini, kita bahas tag-tag penting html.</p>
+
+            <h3>Tag-Tag Dasar HTML</h3>
+            <ul>
+                <li><code>&lt;html&gt;</code> – Tag utama untuk membungkus seluruh dokumen HTML</li>
+                <li><code>&lt;head&gt;</code> – Bagian untuk metadata, seperti judul, link CSS, dll</li>
+                <li><code>&lt;body&gt;</code> – Tempat semua konten yang terlihat ditampilkan</li>
+                <li><code>&lt;p&gt;</code> – Paragraf teks</li>
+                <li><code>&lt;a&gt;</code> – Tautan atau hyperlink</li>
+            </ul>
+
+            <p>Dengan memahami tag-tag ini, kamu sudah bisa mulai membuat halaman web sederhana!</p>
+
+            <a href="blog.html" class="baca">← Kembali ke Blog</a>
+        </article>
+
+        <section class="komentar">
+            <h3>Tinggalkan Komentar</h3>
+            <form>
+                <label for="nama">Nama:</label><br>
+                <input type="text" id="nama" name="nama" required><br><br>
+
+                <label for="pesan">Komentar:</label><br>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea><br><br>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p> &copy; 2025 BLog saya | Dibuat oleh Qosim </p>
+        <p>Kontak: <a href="mailto:qosim@example.com">qosim@example.com</a></p>
+    </footer>
+
+    <script>
+            document.querySelector("form").addEventListener("submit", function (e) {
+                const nama = document.getElementById("nama").value.trim();
+                const pesan = document.getElementById("pesan").value.trim();
+
+                if (nama === "" || pesan === "") {
+                    alert("Nama dan komentar tidak boleh kosong!");
+                    e.preventDefault(); // mencegah form terkirim
+                }
+            });
+        </script>
+
+</body>
+
+</html>
